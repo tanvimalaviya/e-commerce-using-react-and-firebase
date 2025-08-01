@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import Layout from "../../components/layout/Layout";
 import { useContext, useEffect } from "react";
 import MyContext from "../../context/MyContext";
+
 import Loader from "../../components/loader/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addTocart, deleteFromCart } from "../../redux/CartSlice";
