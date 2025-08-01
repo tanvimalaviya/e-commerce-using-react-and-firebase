@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/MyContext";
 import Loader from "../../components/loader/Loader";
 import { addTocart, deleteFromCart } from "../../redux/CartSlice";
 import { useDispatch, useSelector } from "react-redux";

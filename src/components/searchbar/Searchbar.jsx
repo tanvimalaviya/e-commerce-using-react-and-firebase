@@ -1,5 +1,5 @@
 import React, { use, useContext, useState } from "react";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/MyContext";
 import { useNavigate } from "react-router-dom";
 
 // Search Data

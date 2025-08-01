@@ -1,5 +1,5 @@
 
-import MyContext from './myContext';
+import MyContext from './MyContext';
 import { useEffect, useState } from 'react';
 import { collection, deleteDoc, doc, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { fireDB } from '../firebase/FirebaseConfig';

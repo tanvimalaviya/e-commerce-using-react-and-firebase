@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import MyContext from "../../context/myContext";
+import  from "../../context/";
 
 const OrderDetail = () => {
-  const context = useContext(MyContext);
+  const context = useContext();
   const { getAllOrder, orderDelete } = context;
   return (
     <div>

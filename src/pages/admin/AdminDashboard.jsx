@@ -3,7 +3,7 @@ import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import ProductDetail from "../../components/admin/ProductDetail";
 import OrderDetail from "../../components/admin/OrderDetail";
 import UserDetail from "../../components/admin/UserDetail";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/MyContext";
 
 const AdminDashboard = () => {
   const user = JSON.parse(localStorage.getItem('users'));

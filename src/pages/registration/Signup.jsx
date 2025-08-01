@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/MyContext";
 import toast from "react-hot-toast";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, fireDB } from "../../firebase/FirebaseConfig";
