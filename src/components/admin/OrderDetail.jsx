@@ -2,7 +2,7 @@ import { useContext } from "react";
 import MyContext from "../../context/MyContext";
 
 const OrderDetail = () => {
-  const context = useContext();
+  const context = useContext(MyContext);
   const { getAllOrder, orderDelete } = context;
   return (
     <div>
@@ -176,31 +176,31 @@ const OrderDetail = () => {
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.status}
+                            {order?.status}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.addressInfo.name}
+                            {order.addressInfo?.name}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.addressInfo.address}
+                            {order.addressInfo?.address}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.addressInfo.pincode}
+                            {order.addressInfo?.pincode}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.addressInfo.mobileNumber}
+                            {order.addressInfo?.mobileNumber}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.email}
+                            {order?.email}
                           </td>
 
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase ">
-                            {order.date}
+                            {order?.date}
                           </td>
 
                           <td

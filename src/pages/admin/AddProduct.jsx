@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import MyContext from "../../context/MyContext";
 import toast from "react-hot-toast";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
@@ -58,14 +58,15 @@ const AddProduct = () => {
   const addProductFunction = async () => {
     //validation
     if (
-      product.title == "" ||
-      product.price == "" ||
-      product.productImageUrl == "" ||
-      product.category == "" ||
-      product.description == ""
-    ) {
-      return toast.error("all fields are required");
-    }
+  product.title.trim() === "" ||
+  product.price.trim() === "" ||
+  product.productImageUrl.trim() === "" ||
+  product.category.trim() === "" ||
+  product.description.trim() === ""
+) {
+  return toast.error("All fields are required");
+}
+
     setLoading(true);
     try {
       const productRef = collection(fireDB, "products");
@@ -111,7 +112,7 @@ const AddProduct = () => {
           <div className="mb-3">
             <input
               type="text"
-              name="number"
+              name="price"
               value={product.price}
               onChange={(e) => {
                 setProduct({
@@ -150,7 +151,7 @@ const AddProduct = () => {
               }}
               className="w-full px-1 py-2 text-pink-300 bg-pink-50 border border-pink-200 rounded-md outline-none  "
             >
-              <option disabled>Select Product Category</option>
+              <option value="" disabled>Select Product Category</option>
               {categoryList.map((value, index) => {
                 const { name } = value;
                 return (
@@ -185,7 +186,7 @@ const AddProduct = () => {
           <div className="mb-3">
             <button
               type="button"
-              onClick={addProductFunction}
+              onClick={()=>addProductFunction()}
               className="bg-pink-500 hover:bg-pink-600 w-full text-white text-center py-2 font-bold rounded-md "
             >
               ADD PRODUCT
